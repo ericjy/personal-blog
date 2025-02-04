@@ -6,6 +6,9 @@
 	"license": "MIT",
 	"author": "",
 	"scripts": {
+		"docker-build-run": "docker build --build-arg THEME=personal -t hn-blog . && docker run -d -p 3002:3000 hn-blog",
+		"docker-delete": "docker rm -f $(docker ps -a --filter 'ancestor=hn-blog' -q)",
+		"docker-restart": "pnpm docker-delete && pnpm docker-build-run",
 		"format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,json}\"",
 		"preinstall": "npx only-allow pnpm"
 	},
