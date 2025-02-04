@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { ThemeProvider } from 'next-themes';
 import { AppProps } from 'next/app';
 import { useEffect } from 'react';
@@ -15,6 +16,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<ThemeProvider attribute="class">
 			<Component {...pageProps} />
+			<Analytics />
 		</ThemeProvider>
 	);
 }
