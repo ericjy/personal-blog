@@ -12,7 +12,6 @@ RUN npm install -g pnpm
 ARG THEME=enterprise
 
 WORKDIR /app/packages/blog-starter-kit/themes/${THEME}
-RUN cp .env.example .env.local
 RUN pnpm install --frozen-lockfile
 
 RUN pnpm build

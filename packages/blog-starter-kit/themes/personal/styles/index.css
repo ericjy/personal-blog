@@ -59,3 +59,13 @@
 	background-color: transparent;
 	color: #ddd;
 }
+
+div[data-node-type='callout'] {
+	line-height: 1.5;
+	font-size: 0.9rem;
+	background-color: #f3f4f6;
+}
+
+.dark div[data-node-type='callout'] {
+	background-color: #1f2937;
+}
